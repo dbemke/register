@@ -11,22 +11,30 @@ if($res === FALSE){
 ?>
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+
 <body>
+<div class="w3-container w3-blue" >
+<h1>Dziennik elektroniczny</h1>
+
+<div>
+<form align="right" name="form1" method="post" action="logout.php">
+  <label>
+  <input name="submit2" type="submit" id="submit2" value="log out">
+  </label>
+</form>
+
+
+<ol>
 <?php
     while ($row = $res->fetch_assoc()){
         $name = $row["name"];
         $mark = $row["mark"];	
-        echo "<option value=\"$name\">$name $mark</option>";
+        echo "<li value=\"$name\">$name: $mark</li>";
     }    
-    ?>
-
+?>
+</ol>
+</div>
 </body>
 </html>
-
-<div style="float:right">
-<form align="right" name="form1" method="post" action="logout.php">
-  <label class="logoutLblPos">
-  <input name="submit2" type="submit" id="submit2" value="log out">
-  </label>
-</form>
-</div>
