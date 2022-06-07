@@ -34,7 +34,7 @@ if($res === FALSE){
 
 <form align="right" name="form1" method="post" action="logout.php">
   <label>
-  <input name="submit2" type="submit" id="submit2" value="log out">
+  <input name="submit2" type="submit" id="submit2" value="Wyloguj">
   </label>
 </form>
 

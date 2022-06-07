@@ -9,10 +9,11 @@ $name= $_GET["name"];
 $surname= $_GET["surname"];
 $login= $_GET["login"];
 $pass=$_GET["pass"];
+$hash = password_hash($pass, PASSWORD_DEFAULT);
 $type=$_GET["type"];
 
 
-$sql="INSERT INTO users(name, surname, login, password, type) VALUES ('$name', '$surname', '$login', '$pass', '$type')";
+$sql="INSERT INTO users(name, surname, login, password, type) VALUES ('$name', '$surname', '$login', '$hash', '$type')";
 $res = $conn->query($sql);
 
 // sprawdzenie czy sie udalo

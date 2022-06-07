@@ -14,7 +14,7 @@ session_start();
 <div>
 <form align="right" name="form1" method="post" action="logout.php">
   <label>
-  <input name="submit2" type="submit" id="submit2" value="log out">
+  <input name="submit2" type="submit" id="submit2" value="Wyloguj">
   </label>
 </form>
 </div>
@@ -30,7 +30,7 @@ session_start();
   <input type="text" id="login" name="login"><br><br>
   <label for="pass">Hasło:</label>
   <input type="pass" id="pass" name="pass"><br><br>
-  <label for="type">Typ (nauczyciel/uczen):</label>
+  <label for="type">Typ (nauczyciel/uczen/admin):</label>
   <input type="pass" id="type" name="type"><br><br>
   <input type="submit" value="Zatwierdź">
  </fieldset>

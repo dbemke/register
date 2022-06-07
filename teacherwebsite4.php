@@ -35,7 +35,7 @@ echo "<h2> Oceny z $subname: </h2>";
 $sql = "SELECT mark FROM subject_mark WHERE subject_id=$sb_id AND user_id=$ist";
 $res=$conn->query($sql);
 if($res===FALSE){
-	echo " blad";
+	echo " błąd";
 }
 else{
   $sum = 0;
@@ -47,15 +47,19 @@ else{
       $sum = $sum + $mark;
     }
 }
+if($mark_cnt === 0){
+  echo"";
+}else{
 $mean = $sum / $mark_cnt;
 echo "<h2> Średnia z $subname: $mean</h2>";
+}
 ?>
 </ol>
 
 
 <form align="right" name="form1" method="post" action="logout.php">
   <label>
-  <input name="submit2" type="submit" id="submit2" value="log out">
+  <input name="submit2" type="submit" id="submit2" value="Wyloguj">
   </label>
 </form>
 
@@ -70,5 +74,7 @@ echo "<h2> Średnia z $subname: $mean</h2>";
 </div>
 </body>
 </html>
+
+<a href="teacherwebsite.php">Powrót</a>
 
 

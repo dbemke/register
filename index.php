@@ -21,7 +21,7 @@ session_start();
 
   <label for="user_pass">Hasło:</label>
   <input type="user_pass" id="user_pass" name="user_pass"><br><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Zatwierdź">
  </fieldset>
 </form>
 </div>
